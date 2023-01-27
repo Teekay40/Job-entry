@@ -1,0 +1,16 @@
+{
+  "name": "jobentry",
+  "version": "1.0.0",
+  "description": "# FEATURES ## # users Can Post New jobs # each job will have a unique ID. # users can search for jobs via the search bar # Explore jobs based on category # Apply for jobs # Users can send messages to the admin from the contact page. # Users can opt in to be subscribers. via the subscribe form in the footer. # Keep track of wesbite stats via the admin dashboard (Jobs, applications, messages, subscribers).",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6"
+  }
+}

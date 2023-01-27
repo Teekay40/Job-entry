@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin </title>
+
+   <style>
+
+     * {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     }
+
+     .admin-nav {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: rgb(58, 58, 58); */
+        background-color: #00B074;
+        color: white;
+     }
+
+     .main-div {
+        display: flex;  
+        width: 100vw;
+        height: 100vh;     
+     }
+
+     .side-panel{
+        /* background-color: rgb(31, 31, 31); */
+        background-color: white;
+        color: #00B074;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding-top: 20px;
+        padding-left: 25px;
+     }
+
+     .dashboard-body{
+        background-color: whitesmoke;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .table-div {
+        height: 75%;
+        width: 75%;
+     }
+    
+     a {
+        color: #00B074;
+        text-decoration: none;
+     }
+
+     table {
+       border-collapse: collapse;
+     }
+
+     table thead {
+       background-color: black;
+       height: 40px;
+       color: white;
+     }
+
+     tbody tr td {
+      padding: 5px;
+      text-align: center;
+     }
+
+   </style>
+   
+</head>
+<body>
+  
+  <div class="admin-nav">
+       <h1> Applications </h1>
+  </div>
+  <div class="main-div">
+    <div class="side-panel">
+        <a href="/admin"> Dashboard </a>
+        <br>
+        <a href="/admin-jobs"> Jobs </a>
+        <br>
+        <a href="/admin-applications"> Applications </a>
+        <br>
+        <a href="/admin-messages"> Messages </a>
+        <br>
+        <a href="/admin-subscribers"> Subscribers </a>
+        <br>
+        <a href="/index"> LogOut </a>
+ 
+     </div>
+    
+    <div class="dashboard-body">
+          <div class="table-div">
+              <table border="1">
+                  <thead>
+                      <tr>
+                        <th> Name </th>
+                        <th> Email </th>
+                        <th> Portfolio </th>
+                        <th> jobId </th>
+                        <th> Cover Letter </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    {{#each applicationArray}}
+                     <tr>
+                        <td> {{Your name}} </td>
+                        <td> {{your email}} </td>
+                        <td> {{portfolio website}}</td>
+                        <td>  {{job ID}} </td>
+                        <td> {{cover letter}} </td>
+                      </tr>
+                    {{/each}}
+                      {{!-- <tr>
+                        <td> Samson Orekoya </td>
+                        <td> so@gmail.com </td>
+                        <td> https://www.mywebsite.com </td>
+                        <td>  2217155 </td>
+                        <td> I really want this job, because i think its cool ! thanks. </td>
+                      </tr>
+                      <tr>
+                        <td> Ayomide Adekoya </td>
+                        <td> ay@gmail.com </td>
+                        <td> https://www.mywebsite.com </td>
+                        <td>  2217155 </td>
+                        <td> I really want this job, because i think its cool ! thanks. </td>
+                      </tr>
+                      <tr>
+                        <td> Samson Orekoya </td>
+                        <td> so@gmail.com </td>
+                        <td> https://www.mywebsite.com </td>
+                        <td>  2217155 </td>
+                        <td> I really want this job, because i think its cool ! thanks. </td>
+                      </tr> --}}
+                  </tbody>
+              </table>
+          </div>
+    </div>
+  </div>
+
+</body>
+</html>

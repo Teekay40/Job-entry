@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin </title>
+
+   <style>
+
+     * {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     }
+
+     .admin-nav {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: rgb(58, 58, 58); */
+        background-color: #00B074;
+        color: white;
+     }
+
+     .main-div {
+        display: flex;  
+        width: 100vw;
+        height: 100vh;     
+     }
+
+     .side-panel{
+        /* background-color: rgb(31, 31, 31); */
+        background-color: white;
+        color: #00B074;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding-top: 20px;
+        padding-left: 25px;
+     }
+
+     .dashboard-body{
+        background-color: whitesmoke;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .table-div {
+        height: 75%;
+        width: 75%;
+     }
+    
+     a {
+        color: #00B074;
+        text-decoration: none;
+     }
+
+     table {
+       border-collapse: collapse;
+     }
+
+     table thead {
+       background-color: black;
+       height: 40px;
+       color: white;
+     }
+
+     tbody tr td {
+      padding: 5px;
+      text-align: center;
+     }
+
+   </style>
+   
+</head>
+<body>
+  
+  <div class="admin-nav">
+       <h1> Jobs </h1>
+  </div>
+  <div class="main-div">
+    <div class="side-panel">
+        <a href="/admin"> Dashboard </a>
+        <br>
+        <a href="/admin-jobs"> Jobs </a>
+        <br>
+        <a href="/admin-applications"> Applications </a>
+        <br>
+        <a href="/admin-messages"> Messages </a>
+        <br>
+        <a href="admin-subscribers.html"> Subscribers </a>
+        <br>
+        <a href="/index"> LogOut </a>
+ 
+     </div>
+    
+    <div class="dashboard-body">
+          <div class="table-div">
+              <table border="1">
+                  <thead>
+                      <tr>
+                        <th> Title </th>
+                        <th> Id </th>
+                        <th> Location </th>
+                        <th> Salary </th>
+                        <th> Category </th>
+                        <th> Description </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    {{#each dataArray1}}
+                     <tr>
+                        <td> {{title}} </td>
+                        <td> {{id}} </td>
+                        <td> {{location}} </td>
+                        <td> {{salary}} </td>
+                        <td> {{category}} </td>
+                        <td> {{description}} </td>
+                      </tr>
+                    {{/each}}
+                      <tr>
+                        <td> Senior Marketer </td>
+                        <td> 257373 </td>
+                        <td> Lagos </td>
+                        <td> N150,000 </td>
+                        <td> tech </td>
+                        <td> A very fantastic job for all ! Please apply now today ! </td>
+                      </tr>
+                      <tr>
+                        <td> Tele-Sales Agent </td>
+                        <td> 191512 </td>
+                        <td> Lagos </td>
+                        <td> N50,000 </td>
+                        <td> tech </td>
+                        <td> A very fantastic job for all ! Please apply now today ! </td>
+                      </tr>
+                      <tr>
+                        <td> Data Analyst </td>
+                        <td> 192517 </td>
+                        <td> Lagos </td>
+                        <td> N200,000 </td>
+                        <td> tech </td>
+                        <td> A very fantastic job for all ! Please apply now today ! </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+    </div>
+  </div>
+
+</body>
+</html>
